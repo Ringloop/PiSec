@@ -1,0 +1,12 @@
+[submodule "Brain"]
+	path = Brain
+	url = https://github.com/Ringloop/PiSec-Brain.git
+[submodule "Crawler"]
+	path = Crawler
+	url = https://github.com/Ringloop/PiSec-Crawler.git
+[submodule "Proxy"]
+	path = Proxy
+	url = https://github.com/Ringloop/PiSec-Proxy.git
+[submodule "Deploy"]
+	path = Deploy
+	url = https://github.com/Ringloop/PiSec-Deploy.git
