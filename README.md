@@ -22,3 +22,35 @@ This project is composed by 3 main components, present in this repository as sub
 The membership test for the URL is carried out by a Bloom Filter, in order to maintain high performance with a small memory footprint. To further reduce the latency, the responses from the Brain are cached using Redis (https://redis.io/). 
 
 
+
+
+Info to add / merge:
+
+
+
+## Pisec is a light phishing protection system.
+- All implemented in golang
+- Alternative approach to piHole, since here we are using an http proxy instead of a dns server:
+- pros and cons of this approach:
+- cons 1: little bit of performance penalty, due to the proxy forwarding
+- pros 1: possibility to customize the page in case of http and then forwarding to original site
+- pros 2: possibility to perform more analysis in the future, right now we analyze only the contacted domain name but in future we could analyze the amount
+of data transmitted, payloads, etc...
+
+
+## Key concept: KISS + Hobby probject
+
+- there is a central cloud knowledge: multiple  crawlers, and an api exposing data stored in elasticsearch
+- there is a local proxy for each customer (possibility to install it on a rasberry pi, but non limited only to rasberry pi)
+- the cloud database is shared with the customers using a succint data structure (bloom filter)
+
+we chose Elastisearch as a no sql document store for two reasons:
+- 1: rich ecosystem for creating charts and visualization (kibana)
+- 2: in future we would like to use the fuzzy search in order to find similarities on the domains
+
+
+
+## Future improvements
+- shard data in multiple bloom filters in order to implement retention on client side
+- optimize and prepare the bloom filters before the clients request them, since many documents in Elasticserarch are read for this operation
+- Perform stress test and stats on memory usage
