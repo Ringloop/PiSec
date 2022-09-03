@@ -1,7 +1,7 @@
 # PiSec
 A lightweight, efficiency-oriented phishing protection system.
 
-#Introduction
+## Introduction
 PiSec is a network security tool entirely implemented in Go that provides active protection from phishing, blocking the navigation to a suspectedly malicious link.
 
 Phishing is one of the most used attacks in Computer Security: It occurs when an attacker tricks a user into handing over sensitive data such as passwords, credit card numbers and so on.
@@ -14,7 +14,7 @@ This kind of approach presented above, presents some pros and cons:
 - this approach let us the possibility to customize the page in case of http / https and then forwarding to original site, in this way always leave the possibility to the user to navigate to the original destination in case he/she knows where is going.
 - moreover, this kind of approach gives us the possibility to perform a deeper traffic analysis in the future, right now we analyze only the contacted domain name but in future we could analyze the amount of data transmitted, payloads, etc...
 
-#Implementation and application architecture
+## Implementation and application architecture
 
 Our implementation is based on a central cloud knowledge approach: we have a central server (https://github.com/Ringloop/PiSec-Brain) storing the information, this server exposes APIs (in form of REST APIs) to interact with other components. 
 The central database we chose is ElasticSearch (https://www.elastic.co/), a NoSQL document store. Our choose has been driven by two main reasons: 
