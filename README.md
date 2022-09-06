@@ -1,7 +1,11 @@
 # PiSec
 A lightweight, efficiency-oriented anti phishing tool
 
+![image](https://user-images.githubusercontent.com/7256185/188719539-b9a7f25e-ed16-472a-afaa-cf5b47de941e.png)
+
+
 PiSec is a network security tool that provides active protection from phishing, blocking the navigation to a suspectedly malicious link.
+
 
 Phishing is one of the most used attacks in Computer Security: It occurs when an attacker tricks a user into handing over sensitive data such as passwords, credit card numbers and so on.
 It usually begins with an e-mail containing a URL leading to a malicious website that closely resembles an authoritative one.
@@ -11,6 +15,8 @@ The implementation is based on a mixed approach, leveraging a proxy installed on
 
 While the cloud server manages the entire set of URLs considered malicious, the proxy manages the user connectivity.
 The proxy is a lightweight component that should run on minimalistic hardware (such as a Raspberry Pi) and should provide high performance with minimal impact on network bandwidth and latency.
+
+![image](https://user-images.githubusercontent.com/7256185/188719488-7e6addf1-58a1-4823-8114-f892a8845b74.png)
 
 This project is composed by 3 main components, present in this repository as submodules:
 
