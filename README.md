@@ -16,7 +16,9 @@ This kind of approach presented above, presents some pros and cons:
 
 ## Implementation and application architecture
 
-![image](https://user-images.githubusercontent.com/7256185/188719539-b9a7f25e-ed16-472a-afaa-cf5b47de941e.png)
+Below the application domanin (PiSec Cloud) architecture: 
+
+![image](https://user-images.githubusercontent.com/7256185/188719488-7e6addf1-58a1-4823-8114-f892a8845b74.png)
 
 Our implementation is based on a central cloud knowledge approach: we have a central server (https://github.com/Ringloop/PiSec-Brain) storing the information, this server exposes APIs (in form of REST APIs) to interact with other components. 
 The central database we chose is ElasticSearch (https://www.elastic.co/), a NoSQL document store. Our choose has been driven by two main reasons: 
@@ -30,6 +32,8 @@ The main database, providing knowledge about malicious urls, is powered by multi
 The customer logic (we mean: the real control over user navigation) is implemented through a proxy (https://github.com/Ringloop/PiSec-Proxy) that should be installed locally for each customer. Our effort is to ensure that this proxy is tiny and lightweight, so that it can be installed also on a limited machine, such as a Raspberry Pi, or other general purposes SOCs.
 
 We used some measures in order to minimize the requirements for the proxy: 
+
+![image](https://user-images.githubusercontent.com/7256185/188719539-b9a7f25e-ed16-472a-afaa-cf5b47de941e.png)
 
 - We used Bloom Filters (https://en.wikipedia.org/wiki/Bloom_filter) to store the entire setof malicious links is downloaded from the server in order to minimize space occupation and maximize efficiency in search. 
 
