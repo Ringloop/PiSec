@@ -16,6 +16,8 @@ This kind of approach presented above, presents some pros and cons:
 
 ## Implementation and application architecture
 
+![image](https://user-images.githubusercontent.com/7256185/188719539-b9a7f25e-ed16-472a-afaa-cf5b47de941e.png)
+
 Our implementation is based on a central cloud knowledge approach: we have a central server (https://github.com/Ringloop/PiSec-Brain) storing the information, this server exposes APIs (in form of REST APIs) to interact with other components. 
 The central database we chose is ElasticSearch (https://www.elastic.co/), a NoSQL document store. Our choose has been driven by two main reasons: 
 
